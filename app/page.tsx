@@ -5,9 +5,6 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import {
   ArrowRight,
-  CheckCircle2,
-  Laptop,
-  Smartphone,
   Zap,
   Shield,
   Users,
