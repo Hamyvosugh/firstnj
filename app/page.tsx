@@ -3,6 +3,11 @@
 
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import QuoteSlider from './components/QuoteSlider';
+import AnalogClock from './components/AnalogClock';
+import TimezoneClock from './components/TimezoneClock';
+
+
 import {
   ArrowRight,
   Zap,
@@ -56,6 +61,7 @@ export default function LandingPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+
       {/* Hero Sec ion */}
       <header className="relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
@@ -83,7 +89,7 @@ export default function LandingPage() {
             </div>
           </motion.div>
         </div>
-
+ 
         {/* Floating Elements */}
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full -z-10">
           <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-indigo-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
@@ -91,6 +97,11 @@ export default function LandingPage() {
           <div className="absolute bottom-1/4 left-1/3 w-64 h-64 bg-purple-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
         </div>
       </header>
+
+      <div className="container flex bg-slate-400 w-1/2 rounded-lg gap-0 mx-auto justify-center items-center">     
+       <AnalogClock />
+      <TimezoneClock />
+</div>
 
       {/* Features Section */}
       <section className="py-20 bg-white">
@@ -125,7 +136,7 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
-
+      <QuoteSlider />;
       {/* Testimonials Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
