@@ -24,11 +24,11 @@ const AnalogClock = () => {
 
   return (
     <div className="flex flex-col items-center justify-center w-full min-h-screen p-4">
-      <div className="w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96">
+      <div className="w-2/5 aspect-square sm:w-80 md:w-96">
         <div className="relative w-full h-full rounded-full bg-black">
           {/* Logo */}
           <div className="absolute top-1/4 left-1/2 -translate-x-1/2">
-            <span className="text-white text-lg sm:text-xl">gahshomar</span>
+            <span className="text-white text-sm sm:text-xl">gahshomar</span>
           </div>
 
           {/* Clock markers */}
@@ -78,7 +78,7 @@ const AnalogClock = () => {
 
           {/* Digital time */}
           <div className="absolute bottom-1/4 left-1/2 -translate-x-1/2">
-            <span className="text-white text-base sm:text-lg">
+            <span className="text-white text-xs sm:text-lg">
               {time.toLocaleTimeString('en-US', {
                 hour12: true,
                 hour: '2-digit',
