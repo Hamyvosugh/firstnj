@@ -24,11 +24,11 @@ const AnalogClock = () => {
 
   return (
     <div className="flex flex-col items-center justify-center w-full min-h-screen p-4">
-      <div className="w-2/5 aspect-square sm:w-80 md:w-96">
+      <div className="w-1/6 aspect-square sm:w-32 md:w-40">
         <div className="relative w-full h-full rounded-full bg-black">
           {/* Logo */}
           <div className="absolute top-1/4 left-1/2 -translate-x-1/2">
-            <span className="text-white text-sm sm:text-xl">gahshomar</span>
+            <span className="text-white text-[8px] sm:text-xs">gahshomar</span>
           </div>
 
           {/* Clock markers */}
@@ -37,7 +37,7 @@ const AnalogClock = () => {
               <div
                 key={i}
                 className={`absolute top-0 left-1/2 h-full ${
-                  i % 5 === 0 ? 'w-1 -ml-0.5' : 'w-0.5 -ml-px'
+                  i % 5 === 0 ? 'w-0.5 -ml-0.25' : 'w-0.5 -ml-px'
                 }`}
                 style={{
                   transform: `rotate(${i * 6}deg)`,
@@ -45,7 +45,7 @@ const AnalogClock = () => {
               >
                 <div
                   className={`w-full ${
-                    i % 5 === 0 ? 'h-3 bg-white' : 'h-1.5 bg-gray-400'
+                    i % 5 === 0 ? 'h-1 bg-white' : 'h-0.5 bg-gray-400'
                   } absolute`}
                 />
               </div>
@@ -56,29 +56,29 @@ const AnalogClock = () => {
           <div className="absolute inset-0">
             {/* Hour hand */}
             <div
-              className="absolute top-1/2 left-1/2 w-1.5 h-20 -ml-0.75 -mt-20 origin-bottom bg-white rounded-full"
+              className="absolute top-1/2 left-1/2 w-0.5 h-6 -ml-0.25 -mt-6 origin-bottom bg-white rounded-full"
               style={{ transform: `rotate(${hourDegrees}deg)` }}
             />
             
             {/* Minute hand */}
             <div
-              className="absolute top-1/2 left-1/2 w-1 h-28 -ml-0.5 -mt-28 origin-bottom bg-white rounded-full"
+              className="absolute top-1/2 left-1/2 w-0.5 h-8 -ml-0.25 -mt-8 origin-bottom bg-white rounded-full"
               style={{ transform: `rotate(${minuteDegrees}deg)` }}
             />
             
             {/* Second hand */}
             <div
-              className="absolute top-1/2 left-1/2 w-0.5 h-32 -ml-0.25 -mt-32 origin-bottom bg-red-500 rounded-full"
+              className="absolute top-1/2 left-1/2 w-0.5 h-10 -ml-0.25 -mt-10 origin-bottom bg-red-500 rounded-full"
               style={{ transform: `rotate(${secondDegrees}deg)` }}
             />
 
             {/* Center dot */}
-            <div className="absolute top-1/2 left-1/2 w-3 h-3 -ml-1.5 -mt-1.5 bg-red-500 rounded-full" />
+            <div className="absolute top-1/2 left-1/2 w-1 h-1 -ml-0.5 -mt-0.5 bg-red-500 rounded-full" />
           </div>
 
           {/* Digital time */}
           <div className="absolute bottom-1/4 left-1/2 -translate-x-1/2">
-            <span className="text-white text-xs sm:text-lg">
+            <span className="text-white text-[6px] sm:text-xs">
               {time.toLocaleTimeString('en-US', {
                 hour12: true,
                 hour: '2-digit',
